@@ -1,11 +1,27 @@
 // JavaScript Looping Exercise
 
 // 1. Output each item in the following Array to your console:
+
+console.log("Question1");
 var livingRoom = ['couch', 'lamp', 'rug', 'shelf'];
+for(i=0; i<livingRoom.length; i++) {
+  console.log(livingRoom[i]);
+}
 
 // 2. Using a loop, log numbers 22-33 in the console.
 
+console.log("Question2");
+for (j=22; j<=33; j++) {
+  console.log(j);
+};
+
 // 3. Using a similar loop, log numbers 75 to 100, only in increments of five.
+
+console.log("Question3");
+for (i=75; i<=100; i+=5) {
+  console.log(i);
+}
+
 
 // 4. Write a while loop that logs "This is how a professional loops." to the console 5 times.
 //     Use this as an example:
@@ -19,17 +35,61 @@ var livingRoom = ['couch', 'lamp', 'rug', 'shelf'];
 
 //        console.log(counter);
 
+console.log("Question4");
+var counter = 1
+var pro = "I am an amateur professional"
+while (counter <= 5) {
+  counter++;
+  console.log(pro);
+}
+
+
 // 5. Write a conditional statement to find the largest of the numbers in the array provided.
 var largestNum = [-5, -2, -6, 0, -1]
+
+var highest = -Infinity;
+var largestNum = [-5, -2, -6, 0, -1];
+
+for (i=0; i != largestNum.length; i++) {
+if (largestNum[i] > highest) {highest = largestNum[i]};
+}
+console.log(highest);
+
 
 // 6. Separately, use both a for loop and while loop to do the same thing.
 //     Print out the sentence "At home, I have _____ cats." Use the number from your counter to fill in the number.
 //     The numbers should range from 10 to 100, in increments of 25.
 
+console.log("Question6");
+
+for (i=10; i<=75; i=i+25) {
+  console.log ("At home, I have " + i + " cats.");
+}
+
+var cats = 10;
+var num = 0;
+while (cats < 85) {  // condition
+  num++;         // statement
+  cats=cats+25;
+  console.log("At home, I have " + cats + " cats.");
+}
+
+
 // 7. Given the following Array, console log 'Even' if the number is even, 'Even and greater than 10' if the
 //    number is even and greater than 10, and 'Odd' if the number is odd.
 //    HINT: Google 'remainder operator'
 var numArray = [2, 17, 9, 24, 8];
+
+console.log("Question7 - not done yet");
+
+var numArray = [2, 17, 9, 24, 8];
+var test = 0
+for (i=0; i < numArray.length; i++)
+{
+  if  (numArray[i] % 2 == 0)
+      {test = numArray[i]}
+      console.log('Even Steven' + test);
+}
 
 // 8. Given the following Array, create variable primeArray with the value [2, 7, 17, 29, 41, 53, 67, 79, 97]
 var primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97,];
