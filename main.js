@@ -198,6 +198,22 @@ console.log(win[coin] + " Got yer tails");
 // If the number is divisible by 5, print "Buzz" instead of the number.
 // If the number is divisible by both 3 and 5, print "FizzBuzz" instead of the number.
 
+var num = 0;
+for(i=0; i<=99; i++) 
+{
+  num = i+1;
+  if (num/3 % 1 === 0 && num/5 % 1 !== 0) {
+  num = "fizz";
+  }
+  else if (num/5 % 1 === 0 && num/3 % 1 !== 0) {
+  num = "buzz";
+  }
+  else if (num/3 % 1 === 0 && num/5 % 1 === 0) {
+  num = "fizzbuzz";
+  }
+    console.log(num);
+}
+
 
 // CHESS BOARD
 // 24. Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines.
