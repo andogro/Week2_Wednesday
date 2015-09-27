@@ -183,6 +183,15 @@ console.log(chain2);
 //     random number within the bounds of your array. (In this case, our array will only contain two items.)
 // 22. Use a while loop to keep flipping the coin until you get tails.
 
+var coin = Math.floor(Math.random() * 2);
+var win =["heads","tails"];
+
+while (coin === 0) {
+console.log(win[coin] + " Keep on flippin");
+var coin = Math.floor(Math.random() * 2);
+}
+console.log(win[coin] + " Got yer tails");
+
 // 23. FIZZ BUZZ
 // Write a program that uses console.log to print each number up to 100, with a couple exceptions...
 // If the number is divisible by 3, print "Fizz" instead of the number.
