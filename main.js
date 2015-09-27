@@ -9,19 +9,17 @@ for(i=0; i<livingRoom.length; i++) {
 }
 
 // 2. Using a loop, log numbers 22-33 in the console.
-
 console.log("Question2");
 for (j=22; j<=33; j++) {
   console.log(j);
 };
 
-// 3. Using a similar loop, log numbers 75 to 100, only in increments of five.
 
+// 3. Using a similar loop, log numbers 75 to 100, only in increments of five.
 console.log("Question3");
-for (i=75; i<=100; i+=5) {
+for (i=75; i<=100; i=i+5) {
   console.log(i);
 }
-
 
 // 4. Write a while loop that logs "This is how a professional loops." to the console 5 times.
 //     Use this as an example:
@@ -43,12 +41,14 @@ while (counter <= 5) {
   console.log(pro);
 }
 
-
 // 5. Write a conditional statement to find the largest of the numbers in the array provided.
-var largestNum = [-5, -2, -6, 0, -1]
+// set a variable with a really high number then overwrite that number in a loop until it is the highest number
+// compare biggest at the time to the variable big
+//if largestnum at i is greater than current biggest number that make it equal the new number
+//at end of loop console log big
 
 var highest = -Infinity;
-var largestNum = [-5, -2, -6, 0, -1];
+var largestNum = [-5, -2, -6, 0, -1, 222];
 
 for (i=0; i != largestNum.length; i++) {
 if (largestNum[i] > highest) {highest = largestNum[i]};
@@ -60,8 +60,8 @@ console.log(highest);
 //     Print out the sentence "At home, I have _____ cats." Use the number from your counter to fill in the number.
 //     The numbers should range from 10 to 100, in increments of 25.
 
-console.log("Question6");
 
+console.log("Question6");
 for (i=10; i<=75; i=i+25) {
   console.log ("At home, I have " + i + " cats.");
 }
@@ -78,25 +78,48 @@ while (cats < 85) {  // condition
 // 7. Given the following Array, console log 'Even' if the number is even, 'Even and greater than 10' if the
 //    number is even and greater than 10, and 'Odd' if the number is odd.
 //    HINT: Google 'remainder operator'
-var numArray = [2, 17, 9, 24, 8];
 
-console.log("Question7 - not done yet");
-
+console.log("Question7");
 var numArray = [2, 17, 9, 24, 8];
-var test = 0
-for (i=0; i < numArray.length; i++)
+var test = 0;
+for (i=0; i<numArray.length; i++) {
+if(numArray[i] % 2 === 0 && numArray[i]<10)
 {
-  if  (numArray[i] % 2 == 0)
-      {test = numArray[i]}
-      console.log('Even Steven' + test);
+  console.log('Even');
+}
+if(numArray[i] % 2 === 0 && numArray[i]>10)
+{
+  console.log('Even and greater than 10');
+}
+else
+{
+  console.log('Odd');
+}
 }
 
 // 8. Given the following Array, create variable primeArray with the value [2, 7, 17, 29, 41, 53, 67, 79, 97]
+console.log("Question8");
+
 var primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97,];
 var primeArray = [];
+for(i=0;i<primes.length;i+=3)
+{
+primeArray.push(primes[i]);
+}
+  console.log(primeArray);
+
 
 // 9. Prompt a user to pick either a number or a word. Create a script that alerts the user whether they chose a number or a word.
 // Hint: Google 'typeof'
+console.log("Question9");
+var n = prompt("Write either a number or word");
+if (typeof n = "number")
+   {
+   alert("You Picked a Number");
+   }
+else {
+  alert("You picked a Word");
+}
 
 // 10. Write a loop that outputs the following to the console:
 // #
@@ -106,6 +129,14 @@ var primeArray = [];
 // #####
 // ######
 // #######
+
+console.log("Question10");
+var chain = "#";
+var chain2 = "";
+for (var i =0; i<7; i++) {
+chain2 += chain;
+console.log(chain2);
+}
 
 
 // RO SHAM BO!
