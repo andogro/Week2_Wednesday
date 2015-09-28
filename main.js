@@ -87,7 +87,7 @@ if(numArray[i] % 2 === 0 && numArray[i]<10)
 {
   console.log('Even');
 }
-if(numArray[i] % 2 === 0 && numArray[i]>10)
+else if(numArray[i] % 2 === 0 && numArray[i]>10)
 {
   console.log('Even and greater than 10');
 }
@@ -113,13 +113,13 @@ primeArray.push(primes[i]);
 // Hint: Google 'typeof'
 console.log("Question9");
 var n = prompt("Write either a number or word");
-if (typeof n = "number")
+if (isNaN(n) === false)
    {
    alert("You Picked a Number");
    }
 else {
   alert("You picked a Word");
-}
+     }
 
 // 10. Write a loop that outputs the following to the console:
 // #
@@ -143,11 +143,21 @@ console.log(chain2);
 // We're going to create a paper, rock, scissors game that prompts you for your choice and allows the computer to
 // randomly choose. You will use an alert to define the winner.
 
+
 // 11. Use a variable called "human" to prompt the user to type their choice.
+
+var human = prompt("Rock, Paper or Scissors");
+
 // 12. Define an array called "choices" that consists of "paper", "rock", and "scissors".
+
+var choices = ["rock", "paper", "scissors"];
+
 // 13. Define a variable called "computer" and use Math.random to allow the computer to randomly select a number.
 //    For reference:
 //    Math.random gives you a random number between 0 and 1, which is different each time you call it.
+
+var computer = Math.random();
+
 // 14. Let's start our conditional statement. Start by reassigning the computer variable to "rock" if the random number
 //    falls between 0 and .33. Run the code until the console prints out "rock" instead of the number.
 //    In English, it will look like this:
@@ -155,9 +165,52 @@ console.log(chain2);
 //       if the number is between 0 and 33
 //          computer = "rock"
 //       log computer to the console
+
+var human = prompt("Rock, Paper or Scissors");
+var choices = ["rock", "paper", "scissors"];
+var computer = Math.random();
+if (computer<.33)
+   {
+console.log("rock");
+   }
+if (computer>.66);
+    {
+console.log("scissors")
+    }
+else
+    {
+console.log("paper")
+    }
+if(human == "rock")
+{
+}
+if(human == "scissors")
+{
+}
+else
+{
+}
+
 // 15. Now add the following conditionals to the same statement:
 //    If the random number is between .34 and .66, set the computer variable to "paper".
 //    If the random number is between .67 and 1, set the computer variable to "scissors". (Who the hell seriously chooses scissors first?)
+
+var human = prompt("Rock, Paper or Scissors");
+var choices = ["rock", "paper", "scissors"];
+var computer = Math.random();
+if (computer<.33)
+   {
+computer = "rock"
+   }
+else if (computer<.66)
+   {
+computer = "scissors"
+   }
+else
+    {
+computer = "paper"
+    }
+
 // 16. Using both "human", begin another conditional statement. At this time, leave the statements blank.
 //    In English, it will look like this:
 //      if human is "rock"
@@ -166,12 +219,141 @@ console.log(chain2);
 //        leave this blank
 //      else
 //        leave this blank
+
+if (human = "rock" && computer = "rock"); || (human = "scissors" && computer = "scissors"); || (human = "paper" && computer = "paper");
+{
+console.log("Human" + human + "vs Computer" + computer + "You and the computer are equals")
+}
+else if (human == "rock" && computer = ""); || (human = "scissors") && (computer = "paper"); || (human = "paper") && (computer = "rock");
+{
+console.log ("Human" + human + "vs Computer" + computer + "You are smarter than a computer")
+}
+else
+{
+console.log ("Human" + human + "vs Computer" + computer + "You lost to the computer again")
+}
+
 // 17. Now inside of each condition, we need to compare the "human" variable to the "computer" variable,
 //    then print to the console who won the game.
+
+var human = prompt("Rock, Paper or Scissors");
+var human = human.toLowerCase();
+var choices = ["rock", "paper", "scissors"];
+var computer = Math.random();
+var switchWay = 0;
+if (computer<.33)
+   {
+computer = choices[0];
+   }
+else if (computer<.66)
+   {
+computer = choices[2];
+   }
+else
+    {
+computer = choices[1];
+   }
+console.log(computer + " vs " +  human);
+
+if (computer === human) {
+    console.log ("You tied");
+}
+else if (computer == "rock" && human == "paper") {
+console.log ("You defeated the computer");
+}
+else if (computer == "rock" && human == "scissors") {
+ console.log ("The computers have won");
+}
+else if (computer == "scissors" && human == "rock") {
+ console.log ("You defeated the computer");
+}
+else if (computer == "scissors" && human == "paper") {
+ console.log ("The computers have won");
+}
+else if (computer == "paper" && human == "scissors") {
+console.log ("You defeated the computer");
+}
+else if (computer == "paper" && human == "rock") {
+ console.log ("The computers have won");
+}
+else {console.log ("wtf");}
+
+///
+
+
+
 // 18. Give yourself a high five for completing your first javascript game!
 // 19. Use the game you made above and rework it using a switch statement.
+
+
+var human = prompt("Rock, Paper or Scissors");
+var human = human.toLowerCase();
+var choices = ["rock", "paper", "scissors"];
+var computer = Math.random();
+var switchWay = 0;
+if (computer<.33)
+   {
+computer = choices[0];
+   }
+else if (computer<.66)
+   {
+computer = choices[2];
+   }
+else
+    {
+computer = choices[1];
+   }
+console.log(computer + " vs " +  human);
+
+if (computer === human) {
+  switchWay = 1;
+}
+else if (computer == "rock" && human == "paper") {
+  switchWay = 2;
+}
+else if (computer == "rock" && human == "scissors") {
+switchWay = 3; }
+else if (computer == "scissors" && human == "rock") {
+  switchWay = 2;
+}
+else if (computer == "scissors" && human == "paper") {
+switchWay = 3;
+}
+else if (computer == "paper" && human == "scissors") {
+  switchWay = 2;
+}
+else if (computer == "paper" && human == "rock") {
+switchWay = 3;
+}
+
+else {console.log ("wtf");}
+
+switch(switchWay) {
+  case 1:
+    var message = 'You Tied';
+    break;
+  case 2:
+    var message = 'You defeated the computer';
+    break;
+  case 3:
+    var message = 'The computers have won, resistance is futile';
+    break;
+  default:
+    var message = 'wtf2';
+    break;
+}
+
+console.log(message);
+
 // 20. What happens if your user enters something other than "rock", "paper", or "scissors?". Change your default case
 //     to print a snarky message to the console if the input doesn't match any of the options.
+
+var human = prompt("Rock, Paper or Scissors");
+var human = human.toLowerCase();
+if ( (human !== 'rock') && (human != 'paper') && (human != 'scissors'))
+{
+console.log("this is rock, paper, scissors, not " + human + ", paper, scissors.");
+}
 
 
 // HEDS ER TALES?
@@ -185,7 +367,6 @@ console.log(chain2);
 
 var coin = Math.floor(Math.random() * 2);
 var win =["heads","tails"];
-
 while (coin === 0) {
 console.log(win[coin] + " Keep on flippin");
 var coin = Math.floor(Math.random() * 2);
@@ -199,7 +380,7 @@ console.log(win[coin] + " Got yer tails");
 // If the number is divisible by both 3 and 5, print "FizzBuzz" instead of the number.
 
 var num = 0;
-for(i=0; i<=99; i++) 
+for(i=0; i<=99; i++)
 {
   num = i+1;
   if (num/3 % 1 === 0 && num/5 % 1 !== 0) {
@@ -214,40 +395,72 @@ for(i=0; i<=99; i++)
     console.log(num);
 }
 
-
 // CHESS BOARD
 // 24. Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines.
 // At each position of the grid there is either a space or a “#” character. The characters should form a chess board.
 
 //Passing this string to console.log should show something like this:
 
-//  # # # #
-// # # # #
-//  # # # #
-// # # # #
-//  # # # #
-// # # # #
-//  # # # #
-// # # # #
+var board = ["#", " "];
+for (i=0;i<4;i++) {
+var row1 = (board[0] + board[1]).repeat(4);
+var row2 = (board[1] + board[0]).repeat(4);
+console.log( row1 + "\n" + row2);
+}
 
 // When you have a program that generates this pattern, define a variable size = 8 and change the program
 // sso that it works for any size, outputting a grid of the given width and height.
 
-
 // THAR BE DACHSHUNDS
 // We're going to slay some badass dachshunds.
 // 25. Start by using the following variables:
-var slaying = true;
-var youHit = Math.floor(Math.random() * 2);
-var damageThisRound = Math.floor(Math.random()*5 + 1);
-var totalDamage = 0;
+
 
 // 26. Create a while loop that runs as long as "slaying" is equal to true. For now, set "slaying" to false
 //     inside of the body of the loop so we don't break stuff with an infinite loop.
+
+var slaying = true;
+var youHit = Math.floor(Math.random() * 2); // = 0 or 1
+var damageThisRound = Math.floor(Math.random()*5 + 1); // = 1-5
+var totalDamage = 0;
+var counter = 0;
+
+while (slaying == true)
+{
+if (youHit == 1){ console.log("Congratulations, Hot Dogs Tonight!"); }
+if (youHit == 0) {console.log("The Dog has Won, go to your corner!"); }
+slaying = false;
+}
+console.log("End");
+
 // 27. Inside of your while loop, create a conditional statement. If "youHit" is 1 (which is true),
 //     log to the console a congratulatory message about injuring the poor dog.
 //     If "youHit" is 0 (which is false), log to the console a message about that bastard beating you.
 //     The "slaying" variable should be set to false here to end the loop.
+
+var slaying = true;
+var youHit = Math.floor(Math.random() * 2); // = 0 or 1
+var damageThisRound = Math.floor(Math.random()*5 + 1); // = 1 through 5
+var totalDamage = 0;
+var counter = 0;
+
+while (slaying == true)
+{
+if (youHit == 1){
+    totalDamage = (totalDamage + damageThisRound);
+    console.log("Congratulations, You hit a poor defenseless dog!");
+    console.log(totalDamage);
+    if (totalDamage >= 4){
+        slaying = false;        
+         }
+    }
+else if (youHit == 0) {console.log("Dog hit you, go to your corner!"); }
+var youHit = Math.floor(Math.random() * 2);
+counter++;
+console.log(slaying);
+}
+console.log("Congrats, you have defeated the dog from hell.  It took you " + counter + " tries.");
+
 // 28. Inside of the first branch of our conditional statement, after the console.log statement,
 //     set "totalDamage" to totalDamage plus damageThisRound.
 // 29. Below that, begin a new conditional statement. If you hit the dachshund 4 times, you killed him! Log a success message to the console.
